@@ -1,0 +1,9 @@
+"""Função para adicionar itens sem alterar a lista original."""
+
+
+def adicionar_item(lista, item):
+    """Adiciona um item a uma cópia da lista e retorna a nova lista."""
+    nova_lista = lista.copy()
+    nova_lista.append(item)
+
+    return nova_lista
