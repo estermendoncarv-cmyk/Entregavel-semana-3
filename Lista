@@ -1,0 +1,38 @@
+programa
+{
+    funcao inicio()
+    {
+        inteiro lista_original[5] = {10, 20, 30, 40, 50}
+        inteiro lista_copia[5]
+        inteiro i
+
+        // Copiando a lista original
+        para (i = 0; i < 5; i++)
+        {
+            lista_copia[i] = lista_original[i]
+        }
+
+        // Exibindo a lista original
+        escreva("Lista original: ")
+        para (i = 0; i < 5; i++)
+        {
+            escreva(lista_original[i], " ")
+        }
+
+        // Alterando a cópia
+        lista_copia[0] = 100
+
+        escreva("\nLista copia alterada: ")
+        para (i = 0; i < 5; i++)
+        {
+            escreva(lista_copia[i], " ")
+        }
+
+        // Verificando que a original não foi alterada
+        escreva("\nLista original continua: ")
+        para (i = 0; i < 5; i++)
+        {
+            escreva(lista_original[i], " ")
+        }
+    }
+}
