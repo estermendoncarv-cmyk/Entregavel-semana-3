@@ -1,0 +1,107 @@
+programa
+{
+    // ==========================================
+    // CONVERSOR DE TEMPERATURA
+    // ==========================================
+
+    funcao real converter_temperatura(real celsius)
+    {
+        real fahrenheit
+
+        fahrenheit = (celsius * 9 / 5) + 32
+
+        retorne fahrenheit
+    }
+
+
+    // ==========================================
+    // VALIDADOR DE SENHA
+    // ==========================================
+
+    funcao logico validar_senha(cadeia senha)
+    {
+        // Verifica se a senha possui pelo menos 8 caracteres.
+        se (comprimento(senha) >= 8)
+        {
+            retorne verdadeiro
+        }
+        senao
+        {
+            retorne falso
+        }
+    }
+
+
+    // ==========================================
+    // CAIXA
+    // ==========================================
+
+    funcao real calcular_caixa(real preco1, real preco2, real preco3)
+    {
+        // Soma os preços recebidos.
+        retorne preco1 + preco2 + preco3
+    }
+
+
+    // ==========================================
+    // FICHA DO ALUNO
+    // ==========================================
+
+    funcao criar_ficha_aluno(cadeia nome, inteiro idade, cadeia curso)
+    {
+        escreva("\n===== FICHA DO ALUNO =====\n")
+        escreva("Nome: ", nome, "\n")
+        escreva("Idade: ", idade, "\n")
+        escreva("Curso: ", curso, "\n")
+    }
+
+
+    // ==========================================
+    // PROGRAMA PRINCIPAL
+    // ==========================================
+
+    funcao inicio()
+    {
+        real temperatura
+        cadeia senha
+        real total
+        logico senha_valida
+
+        // Conversor de temperatura
+        temperatura = converter_temperatura(25)
+
+        escreva("=== CONVERSOR DE TEMPERATURA ===\n")
+        escreva("25 graus Celsius = ", temperatura, " graus Fahrenheit\n")
+
+
+        // Validador de senha
+        senha = "12345678"
+        senha_valida = validar_senha(senha)
+
+        escreva("\n=== VALIDADOR DE SENHA ===\n")
+
+        se (senha_valida)
+        {
+            escreva("Senha válida!\n")
+        }
+        senao
+        {
+            escreva("Senha inválida!\n")
+        }
+
+
+        // Caixa
+        total = calcular_caixa(10.50, 20.00, 5.50)
+
+        escreva("\n=== CAIXA ===\n")
+        escreva("Total da compra: R$ ", total, "\n")
+
+
+        // Ficha do aluno
+        criar_ficha_aluno(
+            "Maria",
+            18,
+            "Informática"
+        )
+    }
+}
