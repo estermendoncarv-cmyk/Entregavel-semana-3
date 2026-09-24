@@ -1,0 +1,54 @@
+"""Script principal do projeto."""
+
+from calculadora import somar, subtrair, multiplicar, dividir
+from utilidades import (
+    converter_temperatura,
+    validar_senha,
+    calcular_caixa,
+    criar_ficha_aluno,
+)
+from lista_segura import adicionar_item
+
+
+# Funções da calculadora
+print("=== CALCULADORA ===")
+print("Soma:", somar(10, 5))
+print("Subtração:", subtrair(10, 5))
+print("Multiplicação:", multiplicar(10, 5))
+print("Divisão:", dividir(10, 5))
+print("Divisão por zero:", dividir(10, 0))
+
+
+# Conversor de temperatura
+print("\n=== TEMPERATURA ===")
+print("25°C em Fahrenheit:", converter_temperatura(25))
+
+
+# Validador de senha
+print("\n=== SENHA ===")
+print("Senha válida:", validar_senha("12345678"))
+print("Senha inválida:", validar_senha("123"))
+
+
+# Caixa com *precos
+print("\n=== CAIXA ===")
+print("Total:", calcular_caixa(10.50, 20.00, 5.50))
+
+
+# Ficha do aluno com **dados
+print("\n=== FICHA DO ALUNO ===")
+aluno = criar_ficha_aluno(
+    nome="Maria",
+    idade=18,
+    curso="Informática",
+)
+print(aluno)
+
+
+# Lista segura
+print("\n=== LISTA SEGURA ===")
+lista_original = ["maçã", "banana", "laranja"]
+nova_lista = adicionar_item(lista_original, "banana")
+
+print("Lista original:", lista_original)
+print("Nova lista:", nova_lista)
