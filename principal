@@ -1,0 +1,56 @@
+programa
+{
+    funcao inicio()
+    {
+        inteiro resultado
+
+        // Chamando funções matemáticas
+        escreva("=== CALCULADORA ===\n")
+
+        resultado = 10 + 5
+        escreva("Soma: ", resultado, "\n")
+
+        resultado = 10 - 5
+        escreva("Subtracao: ", resultado, "\n")
+
+        resultado = 10 * 5
+        escreva("Multiplicacao: ", resultado, "\n")
+
+        // Lista Segura
+        escreva("\n=== LISTA SEGURA ===\n")
+
+        inteiro lista_original[5] = {10, 20, 30, 40, 50}
+        inteiro lista_copia[5]
+        inteiro i
+
+        // Fazendo uma copia da lista
+        para (i = 0; i < 5; i++)
+        {
+            lista_copia[i] = lista_original[i]
+        }
+
+        escreva("Lista original: ")
+
+        para (i = 0; i < 5; i++)
+        {
+            escreva(lista_original[i], " ")
+        }
+
+        // Alterando somente a copia
+        lista_copia[0] = 100
+
+        escreva("\nLista copia: ")
+
+        para (i = 0; i < 5; i++)
+        {
+            escreva(lista_copia[i], " ")
+        }
+
+        escreva("\nLista original apos a alteracao: ")
+
+        para (i = 0; i < 5; i++)
+        {
+            escreva(lista_original[i], " ")
+        }
+    }
+}
