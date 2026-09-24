@@ -1,0 +1,28 @@
+programa
+{
+    funcao inicio()
+    {
+        real a, b
+
+        escreva("Digite o primeiro número: ")
+        leia(a)
+
+        escreva("Digite o segundo número: ")
+        leia(b)
+
+        escreva("Soma: ", a + b, "\n")
+        escreva("Subtração: ", a - b, "\n")
+        escreva("Multiplicação: ", a * b, "\n")
+
+        // Verifica se o segundo número é zero
+        // antes de realizar a divisão.
+        se (b == 0)
+        {
+            escreva("Não é possível dividir por zero.\n")
+        }
+        senao
+        {
+            escreva("Divisão: ", a / b, "\n")
+        }
+    }
+}
